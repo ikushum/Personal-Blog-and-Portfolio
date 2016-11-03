@@ -21,12 +21,23 @@ class PostsController < ApplicationController
     end
     
     def edit
+        @post=Post.find(params[:id])
     end
     
     def update
+        @post = Post.find(params[:id])
+        @post.update(post_params)
+         if @post.valid?
+            redirect_to root_path
+         else
+           render :edit
+         end
     end
     
     def destroy
+        @post = Post.find(params[:id])
+        @post.destroy
+        redirect_to root_path
     end
     
     private
