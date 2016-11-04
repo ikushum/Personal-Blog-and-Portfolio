@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
     def index
-        @posts = Post.all
+        @posts = Post.all.order(created_at: :desc).limit(11)
     end
     
     def show
@@ -42,7 +42,7 @@ class PostsController < ApplicationController
     
     private
     def post_params
-      params.require(:post).permit(:title, :author, :content, :created_at)
+      params.require(:post).permit(:title, :author, :postimg, :content, :created_at)
     end
     
 end

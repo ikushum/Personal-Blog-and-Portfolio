@@ -14,15 +14,92 @@
  *= require_tree 
  */
  
-@import "bootstrap-sprockets";
-@import "bootstrap";
+
 
 body{
-    background-color:black;
-    height:2000px;
+	width:100%;
+	background-color:white;
+	margin:0px;
+	padding:0px;
+	font-family:'Roboto', sans-serif,helvertica;
 }
 
-#menu{	
+a{
+	text-decoration:none;
+	color:#757171;
+	cursor:pointer;
+}
+
+label{
+	display:none;
+}
+
+#body_wrapper{
+
+}
+
+#header{
+	position:absolute;
+	margin:0px;
+	padding:0px;
+	width:100%;
+	overflow:hidden;
+	background-color:black;
+	background-image:url('http://ikushum.herokuapp.com/static/img/cover4.jpg');
+	background-position:center;
+	background-repeat:no-repeat;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	display:block;
+	z-index:0;
+}
+
+#cover_text_background{
+	position:absolute;
+	top:30%;
+	background-color:black;
+	width:100%;
+	height:30%;
+	opacity:0.5;
+}
+
+#coverText{
+	width:100%;
+	position:absolute;
+	top:25%;
+	left:50%;
+	margin-left:-50%;
+}
+
+h1{
+	font-family: 'Roboto', sans-serif,helvertica;
+    font-size:80px;
+    color: #FFF;
+    text-align:center;
+	margin:0px;
+	padding:0px 10px;
+}
+
+h2{
+	font-family:georgia;
+    font-size:30px;
+    color: #FFF;
+    text-align:center;
+	margin:0px;
+}
+
+.header_head{
+}
+
+span{
+	font-size:20px;
+	font-style:italic;
+	font-weight:0px;
+}
+
+#menu{
 	position:fixed;
 	width:100%;
 	height:70px;
@@ -33,13 +110,13 @@ body{
 	display:none;
 	position:fixed;
 	width:100%;
-	height:65px;
+	height:70px;
 	z-index:2;
 	background-color:white;
 }
 
 img.logo{
-	width:200px;
+	width:120px;
 	height:auto;
 	padding:10px 40px;
 }
@@ -64,9 +141,123 @@ p.menu:hover{
 	color:#769CFB;
 }
 
+#content{
+	position:absolute;
+	width:100%;
+	background-color:white;
+	height:auto;
+	z-index:1;
+	padding:0px;
+}
+
+#button{
+	width:100%;
+}
+
+text{	
+	display:table;
+	padding:10px 20px;
+	font-size:15px;
+	text-align: center;
+	border:2px solid #383838;
+	border-radius:20px;
+	margin:0px auto;
+	white-space: nowrap;
+	font-weight:bold;
+	letter-spacing:2px;
+}
+
+.buttonDefault{
+	color:#383838;
+}
+
+.buttonHover{
+	background-color:#383838;
+	color:white;
+}
+
+.submit_button{
+	width:auto;
+    margin:0px auto;
+	padding:10px 20px;
+	font-size:15px;
+	text-align: center;
+	border:2px solid grey;
+	border-radius:20px;
+	font-weight:bold;
+	letter-spacing:2px;
+	white-space: nowrap;
+	cursor: pointer;
+	margin-top:50px;
+}
+
+.submitbutton_Default{
+	color:grey;
+	background-color:white;
+}
+
+.submit_button_hover{
+	color:white;
+	background-color: grey;
+}
+
+#footer{
+	background-color:#393535;
+	padding:40px;
+	margin-top:90px;
+}
+
+text.footer{
+	padding:0px;
+	display:table;
+	margin:0px auto;
+	text-align:center;
+	font-size:13px;
+	color:#EFE9E9;
+	line-height:3px;
+	border:none;
+	font-weight:normal;
+}
+
+#footer_icons{
+	text-align:center;
+	width:0px auto;
+	margin:15px auto;
+}
+
+img.footer_icons{
+	height:20px;
+	width:auto;
+	padding:10px 5px;
+}
+
+.opacity1{
+	opacity:0.4;
+}
+
+
+
+
 @media screen and (max-width: 768px){
-    
-    #res_menu{
+
+.loading_image{
+	left:40%;
+}
+
+#content{
+	overflow:hidden;
+	width:100%;
+}
+	
+h1.header_head{
+	font-size:70px;
+}	
+
+h2.header-head{
+	font-size:30px;
+}	
+
+#res_menu{
 	position:fixed;
 	margin:0px;
 	top:0px;
@@ -133,5 +324,187 @@ img.logo{
 	display:block;	
 	overflow:hidden;
 }
-    
+
+#about_image_holder{
+	width:420px;
+}
+
+img.personal{
+	width:100px;
+}
+
+p.paragraph{
+	font-size:16px;
+	padding:20px 10%;	
+	line-height:30px;
+}
+
+input{
+	width:400px;
+}
+
+h1.image_hover1{
+	font-size:17px;
+}
+
+h1.image_hover2{
+	font-size:17px;
+}
+
+h1.image_hover3{
+	font-size:17px;
+}
+
+h1.image_hover4{
+	font-size:17px;
+}
+
+h1.image_hover5{
+	font-size:15px;
+}
+
+h1.image_hover6{
+	font-size:17px;
+}
+
+span.gallery_head{
+	font-size:23px;
+}
+
+span.download{
+		font-size:14px;
+}
+}
+
+@media screen and (max-width: 480px){
+
+.loading_image{
+	left:30%;
+}
+
+h1.header_head{
+	font-size:50px;
+}	
+
+h2.header_head{
+	font-size:20px;
+}	
+
+text{
+	font-size:13px;
+	border:1px solid #383838;
+}
+
+h1.header1{
+	font-size:30px;
+}
+
+p.paragraph{
+	font-size:15px;
+	line-height:20px;
+}
+
+#about_image_holder{
+	width:210px;
+}
+
+img.personal{
+	width:100px;
+}
+
+#gallery_home1{
+	width:100%;
+}
+
+#gallery_home2{
+	margin-top:-5px;
+	width:100%;
+}
+
+#gallery_home3{
+	width:100%;
+}
+
+#gallery_home4{
+	margin-top:-5px;
+	width:100%;
+}
+
+#gallery_home5{
+	margin-top:-5px;
+	width:100%;
+}
+
+#gallery_home6{
+	margin-top:-5px;
+	width:100%;
+}
+
+h1.image_hover1{
+	width:100%;
+	margin-top:25%;
+	font-size:14px;
+}
+
+h1.image_hover2{
+	width:100%;
+	margin-top:20%;
+	font-size:14px;
+}
+
+h1.image_hover3{
+	width:100%;
+	margin-top:20%;
+	font-size:14px;
+}
+
+h1.image_hover4{
+	width:100%;
+	margin-top:40%;
+	font-size:14px;
+}
+
+h1.image_hover5{
+	width:100%;
+	margin-top:40%;
+	font-size:14px;
+}
+
+h1.image_hover6{
+	width:100%;
+	margin-top:20%;
+	font-size:14px;
+}
+
+span.gallery_head{
+	font-size:25px;
+}
+
+span.download{
+		font-size:14px;
+}
+
+.services_items{
+	width:200px;
+}
+
+input{
+	width:250px;
+	font-size:14px;
+}
+
+.submit_button{
+	font-size:13px;
+	border:1px solid #383838;
+}
+
+#footer{
+	padding:30px;
+	margin-top:50px;
+}
+
+text.footer{
+	font-size:9px;
+}
+
 }

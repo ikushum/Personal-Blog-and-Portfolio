@@ -1,6 +1,27 @@
+<!---------header section---------->
+<div id="header" style="position:absolute;z-index:-10;height:100%;">
+<div id="coverText">
+<h1 class="header_head"> Ishan Subedi</h1>
+<h2 class="header_head"> Welcome to my website</h2>
+</div>
+</div>
+
+<div id="content" style="position:absolute;top:100%">
+  
 <% @posts.each do |post| %>
-  <h2><%= post.title %> by <%= post.author %></h2>
-  <p>
-    <%= post.content %>
-  </p>
+  <div id="post_list">
+  <a><div class="post_img"><%= post.postimg.html_safe %>  </div> </a>
+  <h2 class="header1"><a><%= post.title %> </a></h2>
+  <h5 class="date_time">by <%= post.author %></h5>
+  <h5 class="date_time"><%= post.created_at %></h5>
+  <div id="button">
+   <%= link_to post_path(post.id) do %>
+    <text class="buttonDefault"> READ MORE </text>
+   <% end %>
+   </div>
+   </div>
 <% end %>
+
+<%= render partial: 'shared/footer.html.erb' %>
+
+</div>

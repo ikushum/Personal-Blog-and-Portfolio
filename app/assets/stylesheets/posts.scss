@@ -1,3 +1,123 @@
-// Place all the styles related to the posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+h1{
+    width:80%;
+	margin:auto;
+	font-size:80px;
+}
+h2{
+	margin-top:20px;
+}
+
+h1.header_head_post{
+	font-size:65px;
+	display:none;
+}
+
+h2.header_head_post{
+	font-size:25px;
+	display:none;
+}
+
+h2.header1{
+	font-size:25px;
+	font-family:helvetica;
+	padding:0px;
+}
+
+h5.date_time{
+	font-size:15px;
+	text-align:center;
+	padding:5px 0px 0px 0px;
+	margin:0px;
+	color:#BAB5B5;
+}
+h5.post_date_time{
+   padding:0px 15%;
+}
+
+img.post_image{
+	width:80%;
+	text-align:center;
+	display:block;
+	margin:auto;
+	margin-bottom:30px;
+}
+
+#img_indivisual{
+	width:60%;
+	text-align:center;
+	display:block;
+	margin:auto;
+	border-radius:55px;
+	margin-bottom:30px;
+}
+
+#post_list{
+	vertical-align:top;
+	width:45%;
+	display:inline-block;
+	margin:0px;
+	padding:80px 2%;
+}
+
+#post_list:hover{
+	background-color:#f8f8f8;
+}
+
+#post{
+	padding:80px 0px;
+}
+
+h3.post_body{
+	font-size:17px;
+	color:grey;
+	margin:0px 15%;
+	font-weight:normal;
+	line-height:30px;
+}
+
+.bold{
+	font-family:helvetica;
+	font-size:21px;
+	font-weight:bold;
+}
+
+#code{
+	background-color:#F9F9F9;
+	font-family:monospace;
+	padding:0 20px 20px 20px;
+	color:black;
+	font-size:16px;
+	overflow: auto;
+}
+
+#post_form{
+    width:70%;
+    margin:100px auto;
+    text-align:center;
+}
+
+.post_form_input{
+    margin:20px 0px;
+    width:100%;
+    padding:10px;
+    height:20px;
+    font-size:15px;
+    border-radius:10px;
+    border:2px solid #c2c2c2;
+    color:#9f9f9f;
+}
+
+.content{
+    height:300px;
+    font-size:20px;
+}
+
+h3.label{
+    margin:0px;
+    text-align:left;
+    color:grey;
+}
+
+text{
+    margin-top:20px;
+}

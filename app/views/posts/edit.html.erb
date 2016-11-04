@@ -1,9 +1,30 @@
-<h1>Edit Post</h1>
+<!---------header section---------->
+<div id="header" style="position:absolute;z-index:-10;height:80%;">
+<div id="coverText">
+<h1 class="header_head"> Edit Post</h1>
+<h2 class="header_head"> Edit your post here</h2>
+</div>
+</div>
 
+<div id="content" style="position:absolute;top:80%">
+
+<div id="post_form">
 <%= simple_form_for @post do |f| %>
-  <%= f.input :title %>
-  <%= f.input :author %>
-  <%= f.input :content %>
+  <h3 class="label"> Title</h3>
+  <%= f.input :title , placeholder: 'My Title', :input_html => {:class=> 'post_form_input'} %>
+  <h3 class="label"> Author</h3>
+  <%= f.input :author, placeholder: 'Ishan Subedi', :input_html => {:class=> 'post_form_input'} %>
+  <h3 class="label"> Post Image</h3>
+  <%= f.input :postimg, placeholder: 'Post Image source URL', :input_html => {:class=> 'post_form_input'} %>
+  <h3 class="label"> Content</h3>
+  <%= f.input :content, placeholder: 'My Content here', :input_html => {:class=> 'post_form_input content'} %>
   <%= f.input :created_at %>
-  <%= f.submit %>
+  <div id="button">
+    <%= f.submit 'UPDATE POST', class: 'submit_button', id: 'submit' %> 
+  </div>
 <% end %>
+</div>
+
+<%= render partial: 'shared/footer.html.erb' %>
+
+</div>

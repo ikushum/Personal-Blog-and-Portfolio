@@ -1,11 +1,28 @@
+// This is a manifest file that'll be compiled into application.js, which will include all the files
+// listed below.
+//
+// Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
+// or any plugin's vendor/assets/javascripts directory can be referenced here using a relative path.
+//
+// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
+// compiled file.
+//
+// Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
+// about supported directives.
+//
 //= require jquery
-//= require bootstrap-sprockets
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
 
-$(document).ready(function(){ /*-----to get the document ready----*/
-
+    
+	$(window).load(function() {  //----------For loading screen-----------
+           $("#body_wrapper").fadeIn(1500);
+           $(".loading_image").fadeOut(1500);
+	 });
+	
+	$(document).ready(function(){ /*-----to get the document ready----*/	
+          
          $("a#6").click(function() {  /*-----for scrolling to different sections----*/
          $('html, body').animate({
              scrollTop: $("#contact").offset().top
@@ -41,9 +58,17 @@ $(document).ready(function(){ /*-----to get the document ready----*/
              scrollTop: $("#blog").offset().top
            }, 500);
          });
-		
+
+         $(".header_head").fadeIn(250);
+         $(".header_head_post").fadeIn(250);
+
+		 $("input#submit").addClass('submitbutton_Default');
 	     $("text").hover(function() { /*-----for button hover effect----*/
          $(this).stop(true,true).toggleClass('buttonHover',250);
+         });
+
+	     $("input.submit_button").hover(function() { /*-----for send message button hover effect----*/
+         $(this).stop(true,true).toggleClass('submit_button_hover',250);
          });
 		 
 	     $("span.download").hover(function() { /*-----for button hover effect----*/
@@ -135,19 +160,16 @@ $(document).ready(function(){ /*-----to get the document ready----*/
 			 $(this).stop(true,true).removeClass('opacity1',250);
 			});
 		 
-		
-		 
-
-		 
-		 
-	     /*-----for responsive nav menu ba	r----*/
+	     /*-----for responsive nav menu bar----*/
 	     $("#res_menu_label").click(function(){
 	          $("p.menu").stop(true,true).slideToggle();
          });
-		 
-		
-		
-		
+         if($(window).width() < 768){ 
+         	$("p.menu").click(function(){
+	          $("p.menu").slideUp();
+         });
+         };
+		 	
 	/*-----If the user scrolls down----*/
       $(window).scroll(function() { 
 	  
@@ -166,7 +188,8 @@ $(document).ready(function(){ /*-----to get the document ready----*/
         if ($(document).scrollTop() > 150) { /*-----If the user scrolls more than 150px----*/
 		
 		/*-----If the user hovers over menu items----*/
-		$("p.menu" ).hover(function() {		
+		$("p.menu" ).hover(
+        function() {		
           $(this).css("color", "#769CFB");
 		} , function(){
 			if($(window).width() > 768){ /*-----for responsive----*/
@@ -193,13 +216,12 @@ $(document).ready(function(){ /*-----to get the document ready----*/
 		  $("#menu").css("border-bottom", "none");
         };
 		
-		
-		
 		if ($(document).scrollTop() > 300) { 
 		$("#header").css("position","fixed").css("margin-top","-300px");
 		}
 		else {
 			$("#header").css("position","absolute").css("margin-top","0px");
+         
         };
 	
       });
