@@ -1,7 +1,7 @@
 h1{
     width:80%;
 	margin:auto;
-	font-size:80px;
+	font-size:65px;
 }
 h2{
 	margin-top:20px;
@@ -70,7 +70,7 @@ img.post_image{
 h3.post_body{
 	font-size:17px;
 	color:grey;
-	margin:0px 15%;
+	margin:30px 15%;
 	font-weight:normal;
 	line-height:30px;
 }
@@ -81,7 +81,7 @@ h3.post_body{
 	font-weight:bold;
 }
 
-#code{
+.code{
 	background-color:#F9F9F9;
 	font-family:monospace;
 	padding:0 20px 20px 20px;
@@ -120,4 +120,72 @@ h3.label{
 
 text{
     margin-top:20px;
+}
+
+
+@media screen and (max-width: 768px){
+	
+h1.header_head_post{
+	font-size:35px;
+}
+
+h2.header_head_post{
+	font-size:15px;
+}
+
+h2.header1{
+	font-size:20px;
+}
+	
+h5.date_time{
+	font-size:13px;
+}
+
+#img_indivisual{
+	width:75%;	
+}
+
+h5.post_date_time{
+   padding:0px 10%;
+}
+
+h3.post_body{
+	font-size:15px;
+	margin:0px 10%;
+	line-height:20px;
+}
+}
+
+@media screen and (max-width: 480px){
+	
+h1.header_head_post{
+	font-size:35px;
+}
+
+h2.header_head_post{
+	font-size:15px;
+}
+	
+#post_list{
+	width:100%;
+	padding:40px 0px;
+}
+
+h2.header1{
+	font-size:19px;
+	padding:0px 10px;
+}	
+
+h5.date_time{
+	font-size:12px;
+}	
+
+img.post_image{
+	width:70%;
+	border-radius:20px;
+}
+
+#img_indivisual{
+	width:100%;
+}
 }
