@@ -1,4 +1,7 @@
 class PostsController < ApplicationController
+    
+    before_action :authenticate_admin!, only: [:new, :create, :edit, :update, :destroy]
+    
     def index
         @posts = Post.all.order(created_at: :desc).limit(11)
     end
