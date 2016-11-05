@@ -11,13 +11,16 @@
   <div id="post">
     <div id="img_indivisual"><%= @post.postimg.html_safe %></div>
     <h5 class="date_time post_date_time" >posted on <%= @post.created_at %> by <%= @post.author %></h5>
-    <h3 class="post_body"><%= @post.content.gsub("\n", "<br>").html_safe %></h3>
-    
-    <a href="<%= edit_post_path(@post.id)  %>"></link_to><h5 class="date_time post_date_time"> Edit Post </h5></a>
-    <%= link_to post_path(@post.id), method: 'delete', data: {confirm: 'Are you sure?'} do%>
-      <h5 class="date_time post_date_time"> Delete Post </h5>
-    <% end %>
 
+    <% if admin_signed_in? %>
+        <br>
+    <a href="<%= edit_post_path(@post.id) %>"><h5 class="date_time post_date_time edit_delete"> Edit Post </h5></a>
+    <%= link_to post_path(@post.id), method: 'delete', data: {confirm: 'Are you sure?'} do%>
+      <h5 class="date_time post_date_time edit_delete"> Delete Post </h5>
+    <% end %>
+    <% end %>   
+   
+    <h3 class="post_body"><%= @post.content.gsub("\n", "<br>").html_safe %></h3>
   </div>
   
 <%= render partial: 'shared/footer.html.erb' %>
