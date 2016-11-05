@@ -11,14 +11,15 @@
   <div id="post">
     <div id="img_indivisual"><%= @post.postimg.html_safe %></div>
     <h5 class="date_time post_date_time" >posted on <%= @post.created_at %> by <%= @post.author %></h5>
-
-    <% if admin_signed_in? %>
-        <br>
-    <a href="<%= edit_post_path(@post.id) %>"><h5 class="date_time post_date_time edit_delete"> Edit Post </h5></a>
+    
+  <div style="text-align:center">
+   <% if admin_signed_in? %>
+    <a href="<%= edit_post_path(@post.id) %>"><h5 class="edit_delete"> Edit Post </h5></a>
     <%= link_to post_path(@post.id), method: 'delete', data: {confirm: 'Are you sure?'} do%>
-      <h5 class="date_time post_date_time edit_delete"> Delete Post </h5>
+      <h5 class="edit_delete"> Delete Post </h5>
     <% end %>
-    <% end %>   
+   <% end %>
+  </div>
    
     <h3 class="post_body"><%= @post.content.gsub("\n", "<br>").html_safe %></h3>
   </div>

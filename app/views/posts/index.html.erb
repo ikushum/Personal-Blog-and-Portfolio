@@ -9,24 +9,23 @@
 <div id="content" style="position:absolute;top:100%">
  
 <% @posts.each do |post| %>
-  <div id="post_list">
+  <div id="post_list" style="text-align:center">
   <a><div class="post_img"><%= post.postimg.html_safe %>  </div> </a>
   <h2 class="header1"><a><%= post.title %> </a></h2>
   <h5 class="date_time">by <%= post.author %></h5>
-  <h5 class="date_time"><%= post.created_at %></h5>
+  <h5 class="date_time"><%= post.created_at.to_s(:full_english) %></h5>
+  
+   <% if admin_signed_in? %>
+    <a href="<%= edit_post_path(post.id) %>"><h5 class="edit_delete"> Edit Post </h5></a>
+    <%= link_to post_path(post.id), method: 'delete', data: {confirm: 'Are you sure?'} do%>
+      <h5 class="edit_delete"> Delete Post </h5>
+    <% end %>
+   <% end %> 
+   
   <div id="button">
    <%= link_to post_path(post.id) do %>
     <text class="buttonDefault"> READ MORE </text>
    <% end %>
-   
-    <% if admin_signed_in? %>
-          <br>
-    <a href="<%= edit_post_path(post.id) %>"><h5 class="date_time post_date_time edit_delete"> Edit Post </h5></a>
-    <%= link_to post_path(post.id), method: 'delete', data: {confirm: 'Are you sure?'} do%>
-      <h5 class="date_time post_date_time edit_delete"> Delete Post </h5>
-    <% end %>
-    <% end %> 
-   
    </div>
    </div>
 <% end %>

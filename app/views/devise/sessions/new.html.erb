@@ -1,17 +1,16 @@
 <!---------header section---------->
 <div id="header" style="position:absolute;z-index:-10;height:80%;">
 <div id="coverText">
-<h1 class="header_head"> Admin Sign In</h1>
-<h2 class="header_head"> You can sign in as an Admin from here</h2>
+<h1 class="header_head"> Sign In</h1>
+<h2 class="header_head"> Sign In as an Admin</h2>
 </div>
 </div>
 
 <div id="content" style="position:absolute;top:80%">
 
-<h2>Sign in</h2>
 
 <div id="sign_in_form">
-
+  
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-inputs">
           <h3 class="label"> Email</h3>
