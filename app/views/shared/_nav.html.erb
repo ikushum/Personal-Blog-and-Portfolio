@@ -12,11 +12,18 @@
 <a href="<%= root_path %>"> <img class="logo" src="http://ikushum.herokuapp.com/static/img/logo.gif"> </a>
 <div id="menu_tabs">
 <a href='<%= root_path %>' id=""><p class="menu"> HOME </p></a>
+<% if !admin_signed_in? %>
 <a id=""><p class="menu"> ABOUT </p></a>
 <a id=""><p class="menu"> GALLERY </p></a>
 <a id=""><p class="menu"> SERVICES </p></a>
-<a href="<%= new_post_path %>"><p class="menu"> NEW POST </p></a>
 <a id=""><p class="menu"> CONTACT </p></a>
+<a id=""><p class="menu"> BLOG </p></a>
+<a href="<%= new_admin_session_path %>" id=""><p class="menu"> ADMIN LOG IN </p></a>
+<% end %>
+<% if admin_signed_in? %>
+<a href="<%= new_post_path %>"><p class="menu admin-menu"> NEW POST </p></a>
+<%= link_to destroy_admin_session_path, method: :delete do %><p class="menu admin-menu"> LOG OUT </p><% end %>
+<% end %>
 
 </div>
 </div>

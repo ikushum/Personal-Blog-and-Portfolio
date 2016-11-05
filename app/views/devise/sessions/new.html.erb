@@ -1,0 +1,35 @@
+<!---------header section---------->
+<div id="header" style="position:absolute;z-index:-10;height:80%;">
+<div id="coverText">
+<h1 class="header_head"> Admin Sign In</h1>
+<h2 class="header_head"> You can sign in as a Admin from here</h2>
+</div>
+</div>
+
+<div id="content" style="position:absolute;top:80%">
+
+<h2>Sign in</h2>
+
+<div id="sign_in_form">
+
+<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="form-inputs">
+          <h3 class="label"> Email</h3>
+    <%= f.input :email, required: false, autofocus: true , placeholder: 'Email', :input_html => {:class=> 'post_form_input'} %>      
+    <h3 class="label">Password</h3>
+    <%= f.input :password, required: false, placeholder: 'Password', :input_html => {:class=> 'post_form_input'} %>
+  </div>
+
+  <div class="form-actions">
+    <div id="button">
+    <%= f.button :submit, "LOG IN", class: 'submit_button', id: 'submit', style: 'margin:0px auto'%>
+    </div>
+  </div>
+<% end %>
+
+</div>
+
+<%= render partial: 'shared/footer.html.erb' %>
+
+
+</div>
