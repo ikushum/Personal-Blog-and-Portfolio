@@ -80,3 +80,47 @@
     background-color:#26739e;
     cursor:pointer;
 }
+
+
+@media screen and (max-width: 700px){
+    
+#comment{
+    padding:15px 0px;
+    width:90%;
+    margin:0px auto 60px auto;
+}
+
+.comment_input{
+    width:95%;
+    padding:0px 10px;
+}
+
+.comment_text_input{
+    margin:2px 0px;
+    width:95%;
+    padding:10px 10px;
+}
+    
+}
+
+
+@media screen and (max-width: 480px){
+    
+#comment{
+    padding:15px 0px;
+    width:90%;
+    margin:0px auto 60px auto;
+}
+
+.comment_input{
+    width:95%;
+    padding:0px 10px;
+}
+
+.comment_text_input{
+    margin:2px 0px;
+    width:95%;
+    padding:10px 10px;
+}
+    
+}
