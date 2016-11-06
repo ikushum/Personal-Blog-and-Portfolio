@@ -1,23 +1,22 @@
 class CommentsController < ApplicationController
     
+    before_action :authenticate_admin!, only: [:destroy]
+    
     def create
         @post = Post.find(params[:post_id])
         @comment = @post.comments.create(comment_params)
         if @comment.valid?
-            redirect_to root_path
+            redirect_to post_path(params[:post_id])
         else
             flash[:alert] = "Invalid input."
-            redirect_to root_path
+            redirect_to post_path(params[:post_id])
         end
-    end
-
-    def edit 
-    end
-    
-    def update 
     end
     
     def destroy 
+        @comment=Comment.find(params[:id])
+        @comment.destroy
+        redirect_to post_path(params[:post_id])
     end
     
     private 

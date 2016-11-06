@@ -23,23 +23,29 @@
   <h3 class="post_body"><%= @post.content.gsub("\n", "<br>").html_safe %></h3>
   </div>
   
-  <div id="comment_display">
-  <h3 class="comment_header"> Comments </h3>
-  <% @post.comments.each do |comment| %>
-  <h3 class="comment_name"><%= comment.name %></h3>
-  <h3 class="comment_date"> posted <%=distance_of_time_in_words(DateTime.now, comment.created_at) %> ago </h5>
-  <h3 class="comment"><%= comment.comment %>
-  <% end %>
-  </div>
-  
-  <div id="comment_display">
+  <div id="comment">
+  <div id="comment_display" style="text-align:center">
+    <h3 class="comment_header"> Leave a Comment </h3>
   <%= simple_form_for Comment.new, url: post_comments_path(@post), method: :post do |f| %>
-    <%= f.input :name, label: false, placeholder: 'name' %>
-    <%= f.input :email, label: false, placeholder: 'email' %>
-    <%= f.input :comment, label: false, placeholder: 'comment' %>
-    <%= f.submit 'Comment' %>
+    <%= f.input :name, label: false, placeholder: 'name', :input_html => {:class=> 'comment_input'} %>
+    <%= f.input :email, label: false, placeholder: 'email (will remain private)', :input_html => {:class=> 'comment_input'} %>
+    <%= f.input :comment, label: false, placeholder: 'comment', :input_html => {:class=> 'comment_text_input'} %>
+    <%= f.submit 'Comment', class: "comment_submit" %>
   <% end %>
-</div>
+  </div> 
+  
+  <% @post.comments.order(created_at: :desc).each do |comment| %>
+  <div id="comment_display" style="background-color:white;padding:30px;border-radius:40px;1px solid #e7e7e7;width:80%">
+  <h3 class="comment_namee"><%= comment.name %> <% if admin_signed_in? %> <span class="comment_date"> via <%= comment.email %> </span> <% end %> </h3>
+  <h3 class="comment_date"> <%=distance_of_time_in_words(DateTime.now, comment.created_at) %> ago </h5>
+  <h3 class="comment"><%= comment.comment %>  </h3>
+    <% if admin_signed_in? %>
+    <%= link_to post_comment_path(@post.id,comment.id), method: 'delete', data: {confirm: 'Are you sure?'} do%>
+      <h5 class="edit_delete" style="padding:0;margin:0"> Delete Comment </h5>
+    <% end %> <% end %>
+  </div>
+  <% end %>
+  </div> 
   
   
 <%= render partial: 'shared/footer.html.erb' %>

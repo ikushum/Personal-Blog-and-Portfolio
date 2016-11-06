@@ -17,7 +17,7 @@ class PostsController < ApplicationController
     def create
         @post = Post.create(post_params)
         if @post.valid?
-            redirect_to root_path
+            redirect_to post_path(params[:post_id])
           else
             render :new
         end
@@ -31,7 +31,7 @@ class PostsController < ApplicationController
         @post = Post.find(params[:id])
         @post.update(post_params)
          if @post.valid?
-            redirect_to root_path
+            redirect_to post_path(params[:post_id])
          else
            render :edit
          end

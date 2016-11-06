@@ -2,20 +2,32 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#comment{
+    background-color:#f4f7f9;
+    padding:40px 10px;
+    width:70%;
+    margin:0px auto 100px auto;
+    border:1px solid #f3f3f3;
+    border-radius:40px;
+}
+
 #comment_display{
     width:70%;
     margin:0px auto;
     color:grey;
+    margin:40px auto;
+    font-weight:bold;
 }
 
 .comment_header{
     font-size:25px;
-    margin:50px auto;
+    margin:0px auto 20px auto;
 }
 
-.comment_name{
+.comment_namee{
     margin:5px 0px;
     font-size:20px;
+    text-align:left;
 }
 
 .comment_date{
@@ -23,10 +35,48 @@
     margin:5px 0px;
     font-weight:normal;
     color:#ccc;
+    text-align:left;
 }
 
 .comment{
     margin:5px 0px;
     font-size:16px;
     font-weight:normal;
+    text-align:left;
+}
+
+.comment_input{
+    width:80%;
+    height:30px;
+    padding:0px 10px;
+    font-size:15px;
+    border:none;
+    margin:2px 0px;
+    color:grey;
+}
+
+.comment_text_input{
+    margin:2px 0px;
+    width:80%;
+    height:100px;
+    padding:10px 10px;
+    font-size:15px;
+    border:none;
+    color:grey;
+}
+
+.comment_submit{
+    width:150px;
+    height:40px;
+    border-radius:10px;
+    font-size:15px;
+    background-color:#62a1c9;
+    color:white;
+    border:1px solid #26739e;
+    margin:20px 0px;
+}
+
+.comment_submit:hover{
+    background-color:#26739e;
+    cursor:pointer;
 }
