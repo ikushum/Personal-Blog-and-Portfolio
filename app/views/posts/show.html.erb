@@ -35,7 +35,7 @@
   </div> 
   
   <% @post.comments.order(created_at: :desc).each do |comment| %>
-  <div id="comment_display" style="background-color:white;padding:30px;border-radius:40px;1px solid #e7e7e7;width:80%">
+  <div id="comment_display" style="background-color:white;padding:30px;border:4px solid #e4eaed;border-radius:30px;;width:80%">
   <h3 class="comment_namee"><%= comment.name %> <% if admin_signed_in? %> <span class="comment_date"> via <%= comment.email %> </span> <% end %> </h3>
   <h3 class="comment_date"> <%=distance_of_time_in_words(DateTime.now, comment.created_at) %> ago </h5>
   <h3 class="comment"><%= comment.comment %>  </h3>
