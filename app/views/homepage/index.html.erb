@@ -1,0 +1,160 @@
+<!---------header section---------->
+<div id="header" style="position:absolute;z-index:-10;height:100%;">
+<div id="coverText">
+<h1 class="header_head"> Ishan Subedi</h1>
+<h2 class="header_head"> Welcome to my website</h2>
+</div>
+</div>
+
+<div id="content" style="position:absolute;top:100%">
+ 
+<!--------About Me section-->
+<div id="about_home">
+<h1 class="header1">About Me</h1>
+<p class="paragraph">Hello there! This is Ishan Subedi. A passionate Full-Stack web developer with passion for Front-End. Have been converting simple pixels into beautiful designs for more than four years. If you are looking for cool websites and graphic designs then well, you have come to the right place. </p>
+<!--------Personal Stuffs section------------>
+<div id="about2">
+<h1 class="header1">Personal Stuffs</h1>
+<div id="about_image_holder">
+<img class="personal" src="/static/img/18.jpg">
+<img class="personal" src="/static/img/17.jpg">
+<img class="personal" src="/static/img/16.jpg">
+<img class="personal" src="/static/img/15.jpg">
+<img class="personal" src="/static/img/14.jpg">
+<img class="personal" src="/static/img/13.jpg">
+<img class="personal" src="/static/img/12.jpg">
+<img class="personal" src="/static/img/10.jpg">
+</div>
+<p class="paragraph"> I am a crazy fan of football. I never miss a single match of my National Football Team and support Manchester United FC in club level football. I had passion for painting since my early childhood but these days, after I learnt graphic designing, I prefer digital painting over hand drawn paintings. Nevertheless I still love sketching. You can have a look at some of them in my gallery. During long vacations, I enjoy travelling, far from noisy cities where we could find silence and nature at its best. Hiking around the mountains could be a good idea.</p></p>
+<div id="button"><a href="#about_home" id="a2"><text class="buttonDefault"> READ LESS</text></a></div>
+</div>
+<div id="button"><a id="a1"><text class="buttonDefault"> READ ON</text></a></div>
+</div>
+
+
+<!-------gallery section------------->
+<div id="gallery_home">
+<h1 class="header1">My Works</h1>
+<!-------------------->
+<div id="gallery_home_items_wrapper">
+<!--------First bigger section------------>
+<div id="gallery_home1">
+<h1 class="image_hover1" > 
+<span class="gallery_head"> Game Development</span> <br>
+ Name : Ball Game <br><br>
+<a href="https://drive.google.com/uc?export=download&id=0BzJ7MMEdeBSaUTBmTDNoaFEtQlE"> <span class="download"> DOWNLOAD </span></a>
+</h1>
+<img class="image" src="/static/img/ball_game.jpg">
+</div>
+<!---------Second smaller section-->
+<div id="gallery_home2">
+<h1 class="image_hover2"> 
+<span class="gallery_head"> Logo Design</span> <br>
+ Name : JD Films <br><br>
+</h1>
+<img class="image" src="/static/img/1.jpg">
+</div>
+<!---------Third smaller section-->
+<div id="gallery_home3" style="margin-top:-5px">
+<h1 class="image_hover3"> 
+<span class="gallery_head"> Logo Design</span> <br>
+ Name : Nepal Portal <br><br>
+</h1>
+<img class="image" src="/static/img/NP.jpg">
+</div>
+<!---------More Gallery Section-->
+<div id="gallery2">
+<!---------1st section of more gallery-->
+<div id="gallery_home4" style="margin-top:-5px">
+<h1 class="image_hover4"> 
+<span class="gallery_head"> Digital Painting</span> <br>
+ Nepalese Football <br><br>
+</h1>
+<img class="image" src="/static/img/f.jpg">
+</div>
+<!---------1st section of more gallery-->
+<div id="gallery_home5" style="margin-top:-5px">
+<h1 class="image_hover5"> 
+<span class="gallery_head"> Digital Painting</span> <br>
+ Gurkha Soilder <br><br>
+</h1>
+<img class="image" src="/static/img/DP1.jpg">
+</div>
+<!---------1st section of more gallery-->
+<div id="gallery_home6" style="margin-top:-5px">
+<h1 class="image_hover6"> 
+<span class="gallery_head"> Graphic Design</span> <br>
+ Champions League Match Banner <br><br>
+</h1>
+<img class="image" src="/static/img/DP3.jpg">
+</div>
+<div id="button"><a id="a4"><text class="buttonDefault" > VIEW LESS PROJECTS </text></a></div>
+
+</div>
+</div>
+<div style="display:table" id="alu"><a><text></text></a></div>
+</div>
+<div id="button"><a id="a3"><text class="buttonDefault" > VIEW MORE PROJECTS </text></a></div>
+
+
+
+<!--------My service section------------>
+<div id="services">
+<h1 class="header1">My Services</h1>
+<div id="services_items_wrapper">	
+<!--------First Section------------>
+<div class="services_items">
+<img class="services" src="/static/img/web_design_icon.png">
+<h2 class="services"> Web Design </h2>
+<p class="services_p"> I have over 3 years of experience as a web developer. I have awesome Javascript/Django skills and a really good ability to communicate my ideas.  </p>
+</div>
+<!--------Middle section------------>
+<div class="services_items" id="middle">
+<img  class="services" src="/static/img/logo_design_icon.png">
+<h2 class="services"> Logo Design </h2>
+<p class="services_p"> Desiging logos and decorating texts/Typography is one of my passions. I love using my creative ideas to make eyecatching designs. </p>
+</div> 
+<!------Last Section-------------->
+<div class="services_items">
+<img class="services" src="/static/img/graphic_design_icon.png">
+<h2 class="services"> Graphic Design </h2>
+<p class="services_p"> I am really good at converting simple pixels into beautiful designs. I am sure you will love my Photoshop/GIMP skills. </p>
+</div> 
+<!----------Hire Me button---------->
+</div>
+<div id="button"><a href="#contact"><text class="buttonDefault"> HIRE ME NOW</text></a></div>
+</div>
+
+
+<!---------------Blog section-->
+<div id="blog">
+<h1 class="header1" style="margin-bottom:30px;"> Latest Blog Posts </h1>
+<% @posts.each do |post| %>
+    <div id="post_list" style="text-align:center">
+  <a><div class="post_img"><%= post.postimg.html_safe %>  </div> </a>
+  <h2 class="header1"><a><%= post.title %> </a></h2>
+  <h5 class="date_time">by <%= post.author %></h5>
+  <h5 class="date_time"><%= post.created_at.to_s(:full_english) %></h5>
+  
+   <% if admin_signed_in? %>
+    <a href="<%= edit_post_path(post.id) %>"><h5 class="edit_delete"> Edit Post </h5></a>
+    <%= link_to post_path(post.id), method: 'delete', data: {confirm: 'Are you sure?'} do%>
+      <h5 class="edit_delete"> Delete Post </h5>
+    <% end %>
+   <% end %> 
+   
+  <div id="button">
+   <%= link_to post_path(post.id) do %>
+    <text class="buttonDefault"> READ MORE </text>
+   <% end %>
+   </div>
+   </div>
+<% end %>
+
+
+</div>
+
+
+<%= render partial: 'shared/footer.html.erb' %>
+
+</div>
