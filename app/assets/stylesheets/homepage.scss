@@ -290,3 +290,151 @@ p.services_p{
 }
 
 //end of blog section for homepage
+
+
+@media screen and (max-width: 768px){
+    
+
+#about_image_holder{
+	width:420px;
+}
+
+img.personal{
+	width:100px;
+}
+
+p.paragraph{
+	font-size:16px;
+	padding:20px 10%;	
+	line-height:30px;
+}
+
+input{
+	width:400px;
+}
+
+h1.image_hover1{
+	font-size:17px;
+}
+
+h1.image_hover2{
+	font-size:17px;
+}
+
+h1.image_hover3{
+	font-size:17px;
+}
+
+h1.image_hover4{
+	font-size:17px;
+}
+
+h1.image_hover5{
+	font-size:15px;
+}
+
+h1.image_hover6{
+	font-size:17px;
+}
+
+span.gallery_head{
+	font-size:23px;
+}
+
+span.download{
+		font-size:14px;
+}
+}
+
+@media screen and (max-width: 480px){
+    
+p.paragraph{
+	font-size:15px;
+	line-height:20px;
+}
+
+#about_image_holder{
+	width:210px;
+}
+
+img.personal{
+	width:100px;
+}
+
+#gallery_home1{
+	width:100%;
+}
+
+#gallery_home2{
+	margin-top:-5px;
+	width:100%;
+}
+
+#gallery_home3{
+	width:100%;
+}
+
+#gallery_home4{
+	margin-top:-5px;
+	width:100%;
+}
+
+#gallery_home5{
+	margin-top:-5px;
+	width:100%;
+}
+
+#gallery_home6{
+	margin-top:-5px;
+	width:100%;
+}
+
+h1.image_hover1{
+	width:100%;
+	margin-top:25%;
+	font-size:14px;
+}
+
+h1.image_hover2{
+	width:100%;
+	margin-top:20%;
+	font-size:14px;
+}
+
+h1.image_hover3{
+	width:100%;
+	margin-top:20%;
+	font-size:14px;
+}
+
+h1.image_hover4{
+	width:100%;
+	margin-top:40%;
+	font-size:14px;
+}
+
+h1.image_hover5{
+	width:100%;
+	margin-top:40%;
+	font-size:14px;
+}
+
+h1.image_hover6{
+	width:100%;
+	margin-top:20%;
+	font-size:14px;
+}
+
+span.gallery_head{
+	font-size:25px;
+}
+
+span.download{
+		font-size:14px;
+}
+
+.services_items{
+	width:200px;
+}
+    
+}
