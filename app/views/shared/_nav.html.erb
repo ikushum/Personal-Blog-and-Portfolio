@@ -14,7 +14,7 @@
 <a href='<%= root_path %>' id="1"><p class="menu"> HOME </p></a>
 <a id="2"><p class="menu"> ABOUT </p></a>
 <a id="3"><p class="menu"> GALLERY </p></a>
-<%= link_to posts_path, method: :get do %><<p class="menu"> BLOG </p><% end %>
+<%= link_to posts_path, method: :get do %><p class="menu"> BLOG </p><% end %>
 <a id="5"><p class="menu"> SERVICES </p></a>
 <a id="6"><p class="menu"> CONTACT </p></a>
 <% if admin_signed_in? %>
