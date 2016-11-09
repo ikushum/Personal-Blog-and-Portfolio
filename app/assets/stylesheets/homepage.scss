@@ -292,6 +292,40 @@ p.services_p{
 //end of blog section for homepage
 
 
+//for contact section
+
+#contact{
+	padding:100px 0px;
+	text-align:center;
+	background-color:white;
+}
+
+#contact_wrapper{
+	margin:0px auto;
+	padding:20px 0px 80px 0px;
+}
+
+.input input{
+	width:600px;
+	border:none;
+	font-size:17px;
+	color:#b3abab;
+	float: left;
+	letter-spacing:3px;	
+	padding-bottom:16px;
+}
+
+.input{
+	width:600px;
+	border-bottom:1px solid #dedada;
+	display:inline-block;
+	padding:0px 15px 0px 15px;
+	margin:0px 30px 40px 30px;
+}
+// end of contact section
+
+
+
 @media screen and (max-width: 768px){
     
 
