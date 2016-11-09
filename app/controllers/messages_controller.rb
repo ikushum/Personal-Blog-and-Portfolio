@@ -2,9 +2,10 @@ class MessagesController < ApplicationController
     def create 
         @message = Message.create(message_params)
         if @message.valid?
+            SendMessage.mail(@message).deliver
             redirect_to root_path
           else
-            redirect_to root_path(anchor: 'contact'))
+            redirect_to root_path(anchor: 'contact')
         end
     end
     

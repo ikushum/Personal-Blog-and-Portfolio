@@ -157,7 +157,7 @@
 <h1 class="header1">Contact Me</h1>
 <p class="services_p" style="font-size:17px;padding:0px 20px;"> Want to say a friendly hello or hire me ? Go ahead and fill the form below. </p>
 <div id="contact_wrapper">
- <%= simple_form_for Message.new, url: message_path, method: :post do |f| %>
+ <%= simple_form_for Message.new, url: messages_path, method: :post do |f| %>
        <div class="input"> <%= f.input :name, label: false, placeholder: 'FULL NAME' %>  </div>
        <div class="input"> <%= f.input :email, label: false, placeholder: 'EMAIL' %>  </div>
        <div class="input"> <%= f.input :message, label: false, placeholder: 'MESSAGE' %>  </div>
