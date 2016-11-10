@@ -17,7 +17,7 @@ class PostsController < ApplicationController
     def create
         @post = Post.create(post_params)
         if @post.valid?
-            redirect_to post_path(params[:post_id])
+            redirect_to post_path(@post)
           else
             render :new
         end
@@ -40,7 +40,7 @@ class PostsController < ApplicationController
     def destroy
         @post = Post.find(params[:id])
         @post.destroy
-        redirect_to root_path
+        redirect_to posts_path
     end
     
     private

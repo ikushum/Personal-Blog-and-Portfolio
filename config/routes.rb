@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'homepage#index'
-  resources :posts do
+  resources :posts, path: 'blog' do
     resources :comments
   end
   resources :messages, only: :create
