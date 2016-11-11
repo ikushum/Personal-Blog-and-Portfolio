@@ -6,7 +6,10 @@ class CommentsController < ApplicationController
         @post = Post.find(params[:post_id])
         @comment = @post.comments.create(comment_params)
         if @comment.valid?
-            redirect_to post_path(params[:post_id])
+            respond_to do |format|
+              format.html {redirect_to post_path(@post)}
+              format.js {}
+            end   
         else
             flash[:alert] = "Invalid input."
             redirect_to post_path(params[:post_id])

@@ -31,7 +31,7 @@ class PostsController < ApplicationController
         @post = Post.find(params[:id])
         @post.update(post_params)
          if @post.valid?
-            redirect_to post_path(params[:post_id])
+            redirect_to post_path(@post)
          else
            render :edit
          end
