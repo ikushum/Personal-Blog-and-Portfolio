@@ -12,6 +12,7 @@
 
 <div id="content" style="position:absolute;top:100%">
  
+<% if admin_signed_in? %>
 <div id="comment_notification_container">
  <h2 class="header1" style="padding:10px 0px;margin:0;border-bottom:2px solid #f2f2f2;font-size:25px;font-weight:normal"> Activity Log </h2>
  <div id="notification-holder"> 
@@ -26,6 +27,7 @@
  <% end %>
  </div>
 </div> 
+<% end %>
  
 <% @posts.each do |post| %>
   <div id="post_list" style="text-align:center">
