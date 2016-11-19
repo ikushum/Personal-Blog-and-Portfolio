@@ -13,13 +13,19 @@
 <div id="content" style="position:absolute;top:100%">
  
 <div id="comment_notification_container">
+ <h2 class="header1" style="padding:10px 0px;margin:0;border-bottom:2px solid #f2f2f2;font-size:25px;font-weight:normal"> Activity Log </h2>
+ <div id="notification-holder"> 
  <% @comments.each do |comment| %>  
-   <%= comment.name %> commented
-   <%= comment.comment %> on 
-   <%= comment.post.title %>
-
+   <a href="<%= post_path(comment.post.id) %>" class="notfic-href">
+   <div class="notification"> 
+   <div class="notfic-title"><%= comment.name %> commented on <%= comment.post.title %> </div>
+   <div class="notfic-content"><%= comment.comment %> </div>
+   <h3 class="comment_date"> <%=distance_of_time_in_words(DateTime.now, comment.created_at) %> ago </h5>
+  </div> 
+  </a> 
  <% end %>
-</div>
+ </div>
+</div> 
  
 <% @posts.each do |post| %>
   <div id="post_list" style="text-align:center">
