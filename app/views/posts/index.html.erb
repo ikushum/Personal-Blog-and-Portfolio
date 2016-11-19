@@ -12,6 +12,15 @@
 
 <div id="content" style="position:absolute;top:100%">
  
+<div id="comment_notification_container">
+ <% @comments.each do |comment| %>  
+   <%= comment.name %> commented
+   <%= comment.comment %> on 
+   <%= comment.post.title %>
+
+ <% end %>
+</div>
+ 
 <% @posts.each do |post| %>
   <div id="post_list" style="text-align:center">
   <a><div class="post_img"><%= post.postimg.html_safe %>  </div> </a>
