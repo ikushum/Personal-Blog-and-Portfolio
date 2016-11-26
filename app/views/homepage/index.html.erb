@@ -135,9 +135,11 @@
 <div id="blog">
 <h1 class="header1" style="margin-bottom:30px;"> Latest Blog Posts </h1>
 <% @posts.each do |post| %>
-    <div id="post_list" style="text-align:center">
-  <a><div class="post_img"><%= post.postimg.html_safe %>  </div> </a>
-  <h2 class="header1"><a><%= post.title %> </a></h2>
+  <div id="post_list" style="text-align:center">
+  <%= link_to post_path(post.id) do %>
+  <div class="post_img"><%= post.postimg.html_safe %>  </div> 
+  <h2 class="header1"><%= post.title %> </h2>
+  <% end %>
   <h5 class="date_time">by <%= post.author %></h5>
   <h5 class="date_time"><%= post.created_at.to_s(:full_english) %></h5>
   
