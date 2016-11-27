@@ -14,6 +14,9 @@
 //= require jquery_ujs
 //= require_tree .
 
+	function navigate_to(id){
+			$('html, body').animate({scrollTop: $(".section"+id).offset().top}, 500);
+	};
     
 	$(window).load(function() {  //----------For loading screen-----------
            $("#body_wrapper").fadeIn(1500);
@@ -22,42 +25,6 @@
 	
 	$(document).ready(function(){ /*-----to get the document ready----*/	
           
-         $("a#6").click(function() {  /*-----for scrolling to different sections----*/
-         $('html, body').animate({
-             scrollTop: $("#contact").offset().top
-           }, 500);
-         });
-
-         $("a#1").click(function() { /*-----for scrolling to different sections----*/
-         $('html, body').animate({
-             scrollTop: $("body").offset().top
-           }, 500);
-         });
-		 
-         $("a#2").click(function() { /*-----for scrolling to different sections----*/
-         $('html, body').animate({
-             scrollTop: $("#about_home").offset().top
-           }, 500);
-         });
-		 
-         $("a#3").click(function() { /*-----for scrolling to different sections----*/
-         $('html, body').animate({
-             scrollTop: $("#gallery_home").offset().top
-           }, 500);
-         });
-		 
-         $("a#5").click(function() { /*-----for scrolling to different sections----*/
-         $('html, body').animate({
-             scrollTop: $("#services").offset().top
-           }, 500);
-         });
-		 
-         $("a#4").click(function() { /*-----for scrolling to different sections----*/
-         $('html, body').animate({
-             scrollTop: $("#blog").offset().top
-           }, 500);
-         });
-
          $(".header_head").fadeIn(250);
          $(".header_head_post").fadeIn(250);
 

@@ -1,5 +1,5 @@
   <% @post.comments.order(created_at: :desc).each do |comment| %>
-  <div id="comment_display" style="background-color:white;padding:30px;border:2px solid #f2f2f2;border-radius:10px;;width:70%">
+  <div id="comment_display" style="background-color:white;margin:30px auto;border-radius:10px;;width:70%">
   <h3 class="comment_namee"><%= comment.name %> <% if admin_signed_in? %> <span class="comment_date"> via <%= comment.email %> </span> <% end %> </h3>
   <h3 class="comment_date"> <%=distance_of_time_in_words(DateTime.now, comment.created_at) %> ago </h5>
   <h3 class="comment"><%= comment.comment %>  </h3>

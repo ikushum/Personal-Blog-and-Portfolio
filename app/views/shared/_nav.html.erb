@@ -11,12 +11,12 @@
 <div id="menu">
 <a href="<%= root_path %>"> <img class="logo" src="http://ikushum.herokuapp.com/static/img/logo.gif"> </a>
 <div id="menu_tabs">
-<a href='<%= root_path %>' id="1"><p class="menu"> HOME </p></a>
-<a id="2"><p class="menu"> ABOUT </p></a>
-<a id="3"><p class="menu"> GALLERY </p></a>
+<a <% if !current_page?(root_path) %> href='<%= root_path %>' <% end %> onclick=navigate_to(1) ><p class="menu"> HOME </p></a>
+<a <% if !current_page?(root_path) %> href="/#about_home" <% end %> onclick=navigate_to(2)><p class="menu"> ABOUT </p></a>
+<a <% if !current_page?(root_path) %> href="/#gallery_home" <% end %> onclick=navigate_to(3)><p class="menu"> GALLERY </p></a>
 <%= link_to posts_path, method: :get do %><p class="menu"> BLOG </p><% end %>
-<a id="5"><p class="menu"> SERVICES </p></a>
-<a id="6"><p class="menu"> CONTACT </p></a>
+<a <% if !current_page?(root_path) %> href="/#services" <% end %> onclick=navigate_to(4)><p class="menu"> SERVICES </p></a>
+<a <% if !current_page?(root_path) %> href="/#contact" <% end %> onclick=navigate_to(5)><p class="menu"> CONTACT </p></a>
 <% if admin_signed_in? %>
 <a href="<%= new_post_path %>"><p class="menu admin-menu"> NEW POST </p></a>
 <%= link_to destroy_admin_session_path, method: :delete do %><p class="menu admin-menu"> LOG OUT </p><% end %>

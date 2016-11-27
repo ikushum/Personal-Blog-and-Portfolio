@@ -31,14 +31,16 @@
   <div id="comment_display" style="text-align:center">
     <h3 class="comment_header"> Leave a Comment </h3>
   <%= simple_form_for Comment.new, url: post_comments_path(@post), method: :post, remote: true do |f| %>
-    <%= f.input :name, label: false, placeholder: 'name', :input_html => {:class=> 'comment_input'} %>
-    <%= f.input :email, label: false, placeholder: 'email (will remain private)', :input_html => {:class=> 'comment_input'} %>
     <%= f.input :comment, label: false, placeholder: 'comment', :input_html => {:class=> 'comment_text_input'} %>
+    <div id="comment_owner">
+    <%= f.input :name, label: false, placeholder: 'name', :input_html => {:class=> 'comment_input'} %>
+    <%= f.input :email, label: false, placeholder: 'email', :input_html => {:class=> 'comment_input'} %>
+    </div>
     <%= f.submit 'Comment', class: "comment_submit", remote: true %>
   <% end %>
   </div> 
   
-  <div id="comments_display">
+  <div id="comments_display" style="clear:both">
   <%= render partial: 'shared/comments.html.erb' %>
   </div>
   
