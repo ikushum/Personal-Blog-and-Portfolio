@@ -14,7 +14,7 @@
   
   <div id="post">
     <div id="img_indivisual"><%= @post.postimg.html_safe %></div>
-    <h5 class="date_time post_date_time"> posted <%=distance_of_time_in_words(DateTime.now, @post.created_at) %> ago by <%= @post.author %></h5>
+    <h5 class="date_time post_date_time"> posted on <%= @post.created_at.strftime("%d %B %Y") %> by <%= @post.author %></h5>
     
   <div style="text-align:center">
    <% if admin_signed_in? %>
