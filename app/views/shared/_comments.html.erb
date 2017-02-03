@@ -1,11 +1,21 @@
-  <% @post.comments.order(created_at: :desc).each do |comment| %>
-  <div id="comment_display" style="background-color:white;margin:30px auto;border-radius:10px;;width:70%">
-  <h3 class="comment_namee"><%= comment.name %> <% if admin_signed_in? %> <span class="comment_date"> via <%= comment.email %> </span> <% end %> </h3>
-  <h3 class="comment_date"> <%=distance_of_time_in_words(DateTime.now, comment.created_at) %> ago </h5>
-  <h3 class="comment"><%= comment.comment %>  </h3>
-    <% if admin_signed_in? %>
-    <%= link_to post_comment_path(@post.id,comment.id), method: 'delete', data: {confirm: 'Are you sure?'} do %>
-      <h5 class="edit_delete" style="padding:0;margin:0"> Delete Comment </h5>
-    <% end %> <% end %>
-  </div>
-  <% end %>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = '//ishansubedi.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                                
