@@ -11,24 +11,7 @@
 </div>
 
 <div id="content" style="position:absolute;top:100%">
- 
-<% if admin_signed_in? %>
-<div id="comment_notification_container">
- <h2 class="header1" style="padding:10px 0px;margin:0;border-bottom:2px solid #e5e5e5;font-size:25px;font-weight:normal"> Activity Log </h2>
- <div id="notification-holder"> 
- <% @comments.each do |comment| %>  
-   <a href="<%= post_path(comment.post.id) %>" class="notfic-href">
-   <div class="notification"> 
-   <div class="notfic-title"><%= comment.name %> commented on <%= comment.post.title %> </div>
-   <div class="notfic-content"><%= comment.comment %> </div>
-   <h3 class="comment_date"> <%=distance_of_time_in_words(DateTime.now, comment.created_at) %> ago </h5>
-  </div> 
-  </a> 
- <% end %>
- </div>
-</div> 
-<% end %>
- 
+
 <% @posts.each do |post| %>
   <div id="post_list" style="text-align:center">
   <%= link_to post_path(post.id) do %>
