@@ -65,10 +65,9 @@ img.post_image{
 }
 
 h3.post_body{
-
-	font-size:20px;
+	font-size:18px;
 	color:grey;
-	margin:30px 15%;
+	margin:30px 20%;
 	font-weight:normal;
 	line-height:35px;
 }
@@ -117,6 +116,11 @@ h3.label{
 
 text{
     margin-top:20px;
+}
+
+#comment{
+	margin:30px 20%;
+	margin-bottom:50px;
 }
 
 #comment_notification_container{
