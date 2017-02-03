@@ -190,6 +190,11 @@ h3.post_body{
 	margin:20px 10%;
 	line-height:20px;
 }
+
+#comment{
+	margin:20px 10%;
+}
+
 }
 
 @media screen and (max-width: 480px){
@@ -224,4 +229,9 @@ img.post_image{
 #img_indivisual{
 	width:100%;
 }
+
+#comment{
+	margin:20px 8%;
+}
+
 }
