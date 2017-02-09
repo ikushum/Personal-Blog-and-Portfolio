@@ -159,6 +159,25 @@ text{
 }
 
 
+.next_prev_post{
+	z-index:100;
+	background:rgba(0, 0, 0, 0.5);
+	position:absolute;
+	bottom:0;
+	width:100%;
+	padding:15px 0px;
+	.next{
+		float:left;
+		color:#d2d2d2;
+		padding:0px 30px;
+	}
+	.prev{
+		float:right;
+		color:#d2d2d2;
+		padding:0px 30px;
+	}
+}
+
 @media screen and (max-width: 768px){
 	
 h1.header_head_post{

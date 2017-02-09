@@ -8,6 +8,10 @@
 <h1 class="header_head"> <%= @post.title %> </h1>
 <h2 class="header_head"> Blog Post</h2>
 </div>
+  <div class="next_prev_post">
+     <%= link_to " Previous Post ", post_path(Post.all[Post.all.index(@post)-1].id), class: 'next' if @post!= Post.first %>
+     <%= link_to " Next Post ", post_path(Post.all[Post.all.index(@post)+1].id), class: 'prev' if @post!= Post.last %>
+  </div>
 </div>
 
 <div id="content" style="position:absolute;top:80%">
@@ -27,8 +31,8 @@
   <h3 class="post_body"><%= @post.content.gsub("\n", "<br>").html_safe %></h3>
   </div>
   
-  <%= link_to "Next", post_path(Post.all[Post.all.index(@post)+1].id) if @post!= Post.last %>
-  <%= link_to "Previous", post_path(Post.all[Post.all.index(@post)-1].id) if @post!= Post.first %>
+  <div style="text-align:center">
+   </div>
 
   <div id="comment">
       <%= render partial: 'shared/comments.html.erb' %>
