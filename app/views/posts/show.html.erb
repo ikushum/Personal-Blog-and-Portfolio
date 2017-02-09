@@ -27,9 +27,11 @@
   <h3 class="post_body"><%= @post.content.gsub("\n", "<br>").html_safe %></h3>
   </div>
   
+  <%= link_to "Next", post_path(Post.all[Post.all.index(@post)+1].id) if @post!= Post.last %>
+  <%= link_to "Previous", post_path(Post.all[Post.all.index(@post)-1].id) if @post!= Post.first %>
+
   <div id="comment">
       <%= render partial: 'shared/comments.html.erb' %>
-
   </div> 
   
   
