@@ -16,7 +16,7 @@
 
 	function navigate_to(id){
 			$('html, body').animate({scrollTop: $(".section"+id).offset().top}, 500);
-	};
+	}
     
 	$(window).load(function() {  //----------For loading screen-----------
            $("#body_wrapper").fadeIn(1500);
@@ -101,13 +101,6 @@
             $("h1.image_hover6").stop(true,true).fadeOut(250);
 			$("img.image").stop(true,true).removeClass('opacity',350);
 		 });
-		 
-		 /*-----for footer social medias hover----*/
-         $("img.footer_icons").hover(function() {
-			      $(this).stop(true,true).addClass('opacity1',250);
-		 }, function(){
-			 $(this).stop(true,true).removeClass('opacity1',250);
-			});
 		 
 	     /*-----for responsive nav menu bar----*/
 	     $("#res_menu_label").click(function(){

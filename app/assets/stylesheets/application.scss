@@ -248,14 +248,12 @@ img.footer_icons{
 	height:20px;
 	width:auto;
 	padding:10px 5px;
+	transition : opacity 0.5s;
 }
 
-.opacity1{
+img.footer_icons:hover{
 	opacity:0.4;
 }
-
-
-
 
 @media screen and (max-width: 768px){
 
