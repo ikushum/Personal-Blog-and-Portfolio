@@ -24,24 +24,7 @@
 	 });
 	
 	$(document).ready(function(){ /*-----to get the document ready----*/	
-          
-         $(".header_head").fadeIn(250);
-         $(".header_head_post").fadeIn(250);
-
-		 $("input#submit").addClass('submitbutton_Default');
-	     $("text").hover(function() { /*-----for button hover effect----*/
-         $(this).stop(true,true).toggleClass('buttonHover',250);
-         });
-
-	     $("input.submit_button").hover(function() { /*-----for send message button hover effect----*/
-         $(this).stop(true,true).toggleClass('submit_button_hover',250);
-         });
 		 
-	     $("span.download").hover(function() { /*-----for button hover effect----*/
-         $(this).stop(true,true).toggleClass('spanHover',250);
-         });
-		 
-		
 		 /*-----for gallery_home hover effect----*/
 	     $("img.image").hover(function() {
              $(this).stop(true,true).addClass('opacity',550);

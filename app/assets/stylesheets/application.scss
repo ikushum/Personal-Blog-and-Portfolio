@@ -90,10 +90,6 @@ h2{
 	margin:0px;
 }
 
-.header_head{
-	display:none;
-}
-
 span{
 	font-size:20px;
 	font-style:italic;
@@ -186,15 +182,13 @@ text{
 	white-space: nowrap;
 	font-weight:bold;
 	letter-spacing:2px;
-}
-
-.buttonDefault{
 	color:#383838;
+	transition: color 0.5s, background-color 0.5s;
 }
 
-.buttonHover{
+text:hover{
 	background-color:#383838;
-	color:white;
+	color:white;	
 }
 
 .submit_button{
@@ -210,14 +204,12 @@ text{
 	white-space: nowrap;
 	cursor: pointer;
 	margin-top:50px;
-}
-
-.submitbutton_Default{
 	color:grey;
 	background-color:white;
+	transition: color 0.5s, background-color 0.5s;
 }
 
-.submit_button_hover{
+.submit_button:hover{
 	color:white;
 	background-color: grey;
 }
