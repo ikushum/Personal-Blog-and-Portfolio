@@ -8,10 +8,12 @@
 <h1 class="header_head"> <%= @post.title %> </h1>
 <h2 class="header_head"> Blog Post</h2>
 </div>
-  <div class="next_prev_post">
-     <%= link_to " Previous Post ", post_path(Post.all[Post.all.index(@post)-1].id), class: 'next' if @post!= Post.first %>
-     <%= link_to " Next Post ", post_path(Post.all[Post.all.index(@post)+1].id), class: 'prev' if @post!= Post.last %>
-  </div>
+
+<!-- <div class="next_prev_post"> //-->
+<!--  link_to " Previous Post ", post_path(Post.all[Post.all.index(@post)-1].id), class: 'next' if @post!= Post.first %>  //-->
+<!-- link_to " Next Post ", post_path(Post.all[Post.all.index(@post)+1].id), class: 'prev' if @post!= Post.last %>  //-->
+<!-- </div> //-->
+
 </div>
 
 <div id="content" style="position:absolute;top:80%">
