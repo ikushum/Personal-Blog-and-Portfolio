@@ -1,6 +1,6 @@
 <% content_for :title, "Ishan Subedi |  "+ @post.title   %>
 <% content_for :description, @post.content %>
-<% content_for :preview, @post.postimg %>
+<% content_for :preview, @post.postimg.html_safe %>
 
 <!---------header section---------->
 <div id="header" style="position:absolute;z-index:-10;height:80%;">
