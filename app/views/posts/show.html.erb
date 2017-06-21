@@ -1,6 +1,6 @@
 <% content_for :title, "Ishan Subedi |  "+ @post.title   %>
 <% content_for :description, @post.content %>
-<% content_for :preview, @post.postimg.html_safe %>
+<% content_for :preview, @post.postimg %>
 
 <!---------header section---------->
 <div id="header" style="position:absolute;z-index:-10;height:80%;">
@@ -19,7 +19,7 @@
 <div id="content" style="position:absolute;top:80%">
   
   <div id="post">
-    <div id="img_indivisual"><%= @post.postimg.html_safe %></div>
+    <div id="img_indivisual"><img class="post_image" src="<%= @post.postimg %>"></div>
     <h5 class="date_time post_date_time"> posted on <%= @post.created_at.strftime("%d %B %Y") %> by <%= @post.author %></h5>
     
   <div style="text-align:center">
