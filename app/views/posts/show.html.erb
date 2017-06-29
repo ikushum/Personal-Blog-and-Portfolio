@@ -16,10 +16,10 @@
 
 </div>
 
-<div id="content" style="position:absolute;top:80%">
+<div id="content" style="position:absolute;top:80%;background-color:white;">
   
   <div id="post">
-    <div id="img_indivisual"><img class="post_image" src="<%= @post.postimg %>"></div>
+    <div id="img_indivisual"><img class="post_image" style="width:80%" src="<%= @post.postimg %>"></div>
     <h5 class="date_time post_date_time"> posted on <%= @post.created_at.strftime("%d %B %Y") %> by <%= @post.author %></h5>
     
   <div style="text-align:center">

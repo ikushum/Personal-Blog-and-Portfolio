@@ -12,6 +12,7 @@
 
 <div id="content" style="position:absolute;top:100%">
 
+<div id="post_wrapper">
 <% @posts.each do |post| %>
   <div id="post_list" style="text-align:center">
   <%= link_to post_path(post.id) do %>
@@ -37,6 +38,7 @@
    </div>
    </div>
 <% end %>
+</div>
 
 <%= render partial: 'shared/footer.html.erb' %>
 
