@@ -15,6 +15,7 @@
 <% @posts.each do |post| %>
   <div id="post_list" style="text-align:center">
   <%= link_to post_path(post.id) do %>
+  <div id="post_details">
   <div class="post_img"><img class="post_image" src="<%= post.postimg %>">  </div> 
   <h2 class="header1"><%= post.title %> </h2>
   <% end %>
@@ -32,6 +33,7 @@
    <%= link_to post_path(post.id) do %>
     <text class="buttonDefault"> READ MORE </text>
    <% end %>
+   </div>
    </div>
    </div>
 <% end %>
