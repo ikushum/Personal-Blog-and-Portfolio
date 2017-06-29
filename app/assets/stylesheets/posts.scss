@@ -219,7 +219,7 @@ h5.date_time{
 }
 
 img.post_image{
-	width:90%;
+	width:100%;
 }
 
 h5.post_date_time{
@@ -247,10 +247,14 @@ h1.header_head_post{
 h2.header_head_post{
 	font-size:15px;
 }
+
+#post_details{
+	width:90%
+}
 	
 #post_list{
 	width:100%;
-	padding:40px 0px;
+	padding:15px 0px;
 }
 
 h2.header1{
@@ -263,8 +267,7 @@ h5.date_time{
 }	
 
 img.post_image{
-	width:90%;
-	border-radius:10px;
+	width:100%;
 }
 
 #img_indivisual{
