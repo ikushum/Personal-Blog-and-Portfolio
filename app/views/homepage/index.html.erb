@@ -145,7 +145,7 @@ JD Films <br><br>
 <h1 class="header1" style="margin-bottom:30px;"> Latest Blog Posts </h1>
 <% @posts.each do |post| %>
   <div id="post_list" style="text-align:center">
-  <%= link_to post_path(post.id) do %>
+  <%= link_to post_path(post.id, post.title.parameterize.capitalize) do %>
   <div class="post_img"><img class="post_image" src="<%= post.postimg %>">  </div> 
   <h2 class="header1"><%= post.title %> </h2>
   <% end %>
@@ -160,7 +160,7 @@ JD Films <br><br>
    <% end %> 
    
   <div id="button">
-   <%= link_to post_path(post.id) do %>
+   <%= link_to post_path(post.id, post.title.parameterize.capitalize) do %>
     <text class="buttonDefault"> READ MORE </text>
    <% end %>
    </div>
@@ -168,7 +168,7 @@ JD Films <br><br>
 <% end %>
 </div>
 
-<!--------Contact section----->
+<!--Contact section-->
 <div id="contact" class="section5">  <p class="services_p" style="color:red"> Under Construction </p>
 <h1 class="header1">Contact Me</h1>
 <p class="services_p" style="font-size:17px;padding:0px 20px;"> Want to say a friendly hello or hire me ? Go ahead and fill the form below. </p>
