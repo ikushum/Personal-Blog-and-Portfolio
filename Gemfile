@@ -14,6 +14,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+gem 'tzinfo-data'
 #for factory_girls
 gem 'factory_girl_rails'
 # Use jquery as the JavaScript library
