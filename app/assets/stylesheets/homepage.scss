@@ -383,9 +383,18 @@ span.download{
 
 @media screen and (max-width: 480px){
     
+
+h1.header1{
+	font-size:30px;
+}
+
 p.paragraph{
 	font-size:15px;
 	line-height:20px;
+}
+
+#about_home{
+	padding:70px 0;
 }
 
 #about_image_holder{
@@ -398,6 +407,10 @@ img.personal{
 
 #gallery_home1{
 	width:100%;
+}
+
+#gallery_home{
+	padding:70px 0 20px 0;	
 }
 
 #gallery_home2{
@@ -468,8 +481,28 @@ span.download{
 		font-size:14px;
 }
 
+#services{
+	padding:70px 0px;
+	margin-top:70px;
+}
+
+#services_items_wrapper{
+	margin-top:10px;
+}
+
 .services_items{
-	width:200px;
+	padding:30px 0px;
+}
+
+h2.services{
+	padding-top:10px;
+	font-size:20px;
+}
+
+p.services_p{
+	font-size:15px;
+	width:90%;
+	margin:5px auto;
 }
     
 }
