@@ -120,40 +120,29 @@
 			$("p.menu").css("color", "white"); 
 		
         /*-----If the user hovers over menu items----*/		
-		$("p.menu" ).hover(function() {		 
-          $(this).css("color", "#769CFB");
-		} , function(){
-			$(this).css("color", "white");
-		})
+			$("p.menu" ).hover(function() {		 
+	          $(this).css("color", "#769CFB");
+			} , function(){
+				$(this).css("color", "white");
+			})
 		};
 		
         if ($(document).scrollTop() > 150) { /*-----If the user scrolls more than 150px----*/
-		
+
 		/*-----If the user hovers over menu items----*/
 		$("p.menu" ).hover(
         function() {		
           $(this).css("color", "#769CFB");
 		} , function(){
-			if($(window).width() > 768){ /*-----for responsive----*/
-			  $(this).css("color", "#383838");
-			} else {
-				$(this).css("color", "white");
-			};
+			$(this).css("color", "white");
 		});
 		
-				
-			if($(window).width() > 768){ /*-----for responsive----*/
-			  $("p.menu").css("color", "#383838");
-			} else {
-			  $("p.menu").css("color", "white");
-			};
+			
 			
 		$("#menu2").fadeIn(500);
-		$("#menu").css("border-bottom", "1px solid #DEDADA");
 
 		} else { /*-----If the user scroll is not more than 150px----*/
 		  $("#menu2").fadeOut(250)
-		  $("#header").css("position", "absolute").css("margin-top","-0px");
 		  $("#line").css("background-color", "white");
 		  $("#menu").css("border-bottom", "none");
         };
